@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>hola belén</title>
+<link rel="alternate" hreflang="en" href="en/">
+<meta name="description" content="Belén Pérez, diseñadora gráfica. Identidad y diseño editorial.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23141414%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Arial%27 font-weight=%27700%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%23F5F2EC%27%3Eb%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,760&family=Inter:wght@300;400;500&display=swap">
+<style>
+/* Layout: abre como Judit Grau (díptico a sangre, rótulos mínimos en esquinas);
+   sigue como Mackey Saturday (frase ligera, proyectos enormes pegados a un borde, nombre + una frase + "más detalles") */
+:root{
+  --papel:#F5F2EC; --tinta:#141414; --calco:#3B2FD9; --gris:#6E6B66; --linea:#141414;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --text:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gut:max(16px, env(safe-area-inset-left,0px));
+  --gutr:max(16px, env(safe-area-inset-right,0px));
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--papel:#121212;--tinta:#F1EEE8;--calco:#8F88FF;--gris:#A3A09A;--linea:#F1EEE8;color-scheme:dark}}
+:root[data-theme="dark"]{--papel:#121212;--tinta:#F1EEE8;--calco:#8F88FF;--gris:#A3A09A;--linea:#F1EEE8;color-scheme:dark}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--papel);color:var(--tinta);font-family:var(--text);font-weight:300;line-height:1.5;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:2px solid var(--calco);outline-offset:4px}
+.small{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
+
+/* ---------- apertura (Judit) ---------- */
+.open{position:relative;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:minmax(0,1fr);height:min(100vh,1000px);min-height:520px;overflow:hidden}
+.open img{width:100%;height:100%;min-height:0;object-fit:cover}
+/* velo suave arriba y abajo para que los rótulos se lean sobre cualquier imagen */
+.open::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(rgba(0,0,0,.42),transparent 110px),linear-gradient(0deg,rgba(0,0,0,.42),transparent 110px)}
+.corner{position:absolute;z-index:2;color:#fff;font-size:13px;font-weight:400;letter-spacing:.02em}
+.corner.tl{top:18px;left:var(--gut)} .corner.tr{top:18px;right:var(--gutr)}
+.corner.bl{bottom:18px;left:var(--gut)} .corner.br{bottom:18px;right:var(--gutr)}
+.corner a:hover{text-decoration:underline}
+.logo{font-family:var(--display);font-weight:760;font-size:19px;letter-spacing:-.02em}
+.logo .h{-webkit-text-fill-color:transparent;-webkit-text-stroke:1.2px currentColor}
+
+/* ---------- intro (Mackey) ---------- */
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:32px;padding-block:96px 140px;padding-left:var(--gut);padding-right:var(--gutr);max-width:1440px;margin-inline:auto}
+.intro .name{font-family:var(--display);font-weight:760;font-size:22px;letter-spacing:-.015em}
+.intro p{font-size:clamp(26px,2.7vw,38px);line-height:1.35;margin:0;max-width:22ch}
+.intro .down{display:block;margin-top:28px;font-size:26px}
+
+/* ---------- proyectos (Mackey) ---------- */
+.work{display:flex;flex-direction:column;gap:150px;padding-bottom:160px}
+.proj{display:flex;flex-direction:column;gap:28px}
+.proj figure{margin:0;width:75%;aspect-ratio:16/9;overflow:hidden}
+.proj.right figure{margin-left:auto}
+.proj figure img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.proj figure.panel{display:flex;align-items:center;justify-content:center}
+.proj figure.panel img{width:auto;height:84%;object-fit:contain}
+.proj:hover figure img{transform:scale(1.02)}
+.cap{display:grid;grid-template-columns:200px minmax(0,1fr);gap:32px;max-width:900px;padding-left:var(--gut);padding-right:var(--gutr)}
+.proj.left .cap{margin-left:12.5%}
+.proj.right .cap{margin-left:calc(25% + 0px)}
+.cap h2{font-family:var(--text);font-weight:500;font-size:19px;margin:0}
+.cap p{margin:0;font-size:19px;line-height:1.5;max-width:40ch}
+.more{display:inline-flex;align-items:center;gap:12px;margin-top:16px}
+.more::after{content:"";width:40px;height:1px;background:currentColor;transition:width .3s}
+.proj:hover .more{color:var(--calco)} .proj:hover .more::after{width:64px}
+
+/* ---------- info ---------- */
+.info{display:grid;grid-template-columns:1fr 1fr;gap:32px;padding-block:120px;padding-left:var(--gut);padding-right:var(--gutr);max-width:1440px;margin-inline:auto;border-top:1px solid var(--linea)}
+.info p{margin:0 0 22px;font-size:clamp(20px,1.8vw,26px);line-height:1.45;max-width:30ch}
+.info dl{display:grid;grid-template-columns:auto 1fr;gap:10px 28px;margin:40px 0 0;font-size:16px;font-weight:400}
+.info dt{color:var(--gris)} .info dd{margin:0}
+.info a{border-bottom:1px solid currentColor}
+footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:24px 36px;padding-left:var(--gut);padding-right:var(--gutr);color:var(--gris);font-size:13px}
+
+/* ---------- página de proyecto (Judit + Mackey) ---------- */
+.case .open{grid-template-columns:1fr}
+.case .open.two{grid-template-columns:1fr 1fr}
+.case-text{display:grid;grid-template-columns:1fr 1fr;gap:32px;padding-block:96px 120px;padding-left:var(--gut);padding-right:var(--gutr);max-width:1440px;margin-inline:auto}
+.case-text h1{font-family:var(--display);font-weight:760;font-size:22px;margin:0;letter-spacing:-.015em}
+.case-text .lead{font-size:clamp(24px,2.4vw,34px);line-height:1.35;margin:0 0 32px;max-width:26ch}
+.case-text .body p{margin:0 0 16px;font-size:17px;max-width:52ch;color:var(--gris)}
+.case-text .credit{margin-top:28px;font-size:13px;color:var(--gris)}
+.plates{display:flex;flex-direction:column;gap:12px}
+.plate{position:relative}
+.plate img{width:100%}
+.plate.panel{display:flex;justify-content:center;padding:6vw 16px;background:#fff}
+.plate.panel.dark{background:#141414}
+.plate.panel img{width:auto;max-width:100%;max-height:80vh}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.duo img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5}
+.duo.pages img{aspect-ratio:auto;height:auto}
+.quad{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.quad img{width:100%;aspect-ratio:9/16;object-fit:cover}
+.quad.sq img{aspect-ratio:1}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;background:#fff}
+.grid4 img{width:100%;height:auto}
+.grid4 .span3{grid-column:span 3;width:100%;height:100%;object-fit:cover}
+.case-text .tag{display:inline-block;margin:12px 0 0;padding:4px 10px;border:1px solid currentColor;font-size:13px;font-weight:500}
+.lbl{position:absolute;bottom:14px;left:var(--gut);font-size:12px;color:var(--gris)}
+.next{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-block:120px 80px;padding-left:var(--gut);padding-right:var(--gutr);max-width:1440px;margin-inline:auto}
+.next b{font-family:var(--display);font-weight:760;font-size:clamp(32px,5vw,64px);letter-spacing:-.03em}
+.next:hover b{color:var(--calco)}
+
+@media (max-width:820px){
+  .open,.case .open.two{grid-template-columns:1fr 1fr;height:72vh;min-height:420px}
+  .intro,.info,.case-text{grid-template-columns:1fr;padding-block:64px}
+  .work{gap:96px}
+  .proj figure{width:100%}
+  .proj figure.panel img{height:78%}
+  .proj.left .cap,.proj.right .cap{margin-left:0}
+  .cap{grid-template-columns:1fr;gap:8px}
+  .quad{grid-template-columns:1fr 1fr}
+  .grid4{grid-template-columns:repeat(3,1fr)}
+  .grid4 .span3{grid-column:span 2}
+  .duo{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<!-- ================= HOME ================= -->
+<div id="home">
+  <section class="open" aria-label="Portada">
+    <img src="img/dima-ola.webp" alt="Detalle de un relieve de Dima Smola con reflejos perlados">
+    <img src="img/dima-cobre.webp" alt="Detalle de una obra de Dima Smola en cobre">
+    <a class="corner tl logo" href="#"><span class="h">hola</span> belén</a>
+    <span class="corner tr">portfolio · <a href="en/" hreflang="en" lang="en">English</a></span>
+    <nav class="corner bl" aria-label="Principal"><a href="#trabajo">trabajo</a> · <a href="#info">info</a></nav>
+    <span class="corner br">Dima Smola, 2026</span>
+  </section>
+
+  <section class="intro" id="trabajo">
+    <span class="name">Belén Pérez</span>
+    <div>
+      <p>Diseña identidades y piezas editoriales. Escucha antes de trazar.</p>
+      <span class="down" aria-hidden="true">↓</span>
+    </div>
+  </section>
+
+  <section class="work" aria-label="Proyectos">
+    <a class="proj right" href="#dima-smola">
+      <figure><img src="img/dima-hero.webp" alt="Relieve escultórico gris de Dima Smola"></figure>
+      <div class="cap"><h2>Dima Smola</h2><div><p>Identidad para un escultor cuyas superficies cambian con la luz.</p><span class="more small">Más detalles</span></div></div>
+    </a>
+    <a class="proj left" href="#metropoli">
+      <figure class="panel" style="background:#141414"><img src="img/metropoli-herb-lubalin.webp" alt="Página de apertura sobre Herb Lubalin en la revista Metropoli" loading="lazy"></figure>
+      <div class="cap"><h2>Metropoli</h2><div><p>Revista de tendencias de diseño: cabecera, sumario e interiores.</p><span class="more small">Más detalles</span></div></div>
+    </a>
+    <a class="proj right" href="#mayte">
+      <figure class="panel" style="background:#FFFFFF"><img src="img/mayte-monograma.webp" alt="Monograma de Peluquería Mayte, una M formada por unas tijeras" loading="lazy"></figure>
+      <div class="cap"><h2>Peluquería Mayte</h2><div><p>Monograma, papelería y packaging para una peluquería de barrio.</p><span class="more small">Más detalles</span></div></div>
+    </a>
+    <a class="proj left" href="#stussy">
+      <figure><img src="img/stussy-aero-apertura.webp" alt="Propuesta web Aero para Stüssy, con ventanas de sistema y burbujas" style="object-position:50% 25%" loading="lazy"></figure>
+      <div class="cap"><h2>Stüssy</h2><div><p>Rediseño web especulativo en dos direcciones: Aero y Grunge.</p><span class="more small">Más detalles</span></div></div>
+    </a>
+    <a class="proj right" href="#senaletica">
+      <figure><img src="img/senaletica-fachada.webp" alt="Banderola de producción audiovisual en una fachada de hormigón" loading="lazy"></figure>
+      <div class="cap"><h2>Señalética</h2><div><p>Pictogramas para aulas, servicios y zonas comunes, aplicados en soporte real.</p><span class="more small">Más detalles</span></div></div>
+    </a>
+    <a class="proj left" href="#cometas">
+      <figure><img src="img/cometas-cartel-pared.webp" alt="Cartel de Cometas pegado en una pared desconchada" loading="lazy"></figure>
+      <div class="cap"><h2>Cometas</h2><div><p>Cartel e identidad para una propuesta de exposición en Las Cigarreras, Alicante.</p><span class="more small">Más detalles</span></div></div>
+    </a>
+  </section>
+
+  <section class="info" id="info">
+    <span class="name" style="font-family:var(--display);font-weight:760;font-size:22px">Info</span>
+    <div>
+      <p>Soy Belén Pérez, estudiante de 4º de Diseño Gráfico en la EASDO, en Orihuela. Trabajo identidad y diseño editorial.</p>
+      <p>También tatúo línea fina: me ha enseñado a bocetar mucho antes de trazar, porque un trazo hecho no se borra.</p>
+      <dl>
+        <dt>Busco</dt><dd>Prácticas en Alicante y Murcia, 2026/27</dd>
+        <dt>Email</dt><dd>blnn.przinfo@gmail.com</dd>
+        <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/belnprez">belnprez</a></dd>
+      </dl>
+    </div>
+  </section>
+  <footer><span>© 2026 Belén Pérez</span><span>Vega Baja, Alicante</span></footer>
+</div>
+
+<!-- ================= PROYECTO: DIMA SMOLA ================= -->
+<div id="dima-smola" class="case" hidden>
+  <section class="open two" aria-label="Apertura del proyecto">
+    <img src="img/dima-hero.webp" alt="Relieve Sinapsis colgado en pared" style="object-position:40% 50%">
+    <img src="img/dima-violeta.webp" alt="Detalle de Colapso, camaleón violeta">
+    <a class="corner tl logo" href="#"><span class="h">hola</span> belén</a>
+    <a class="corner tr" href="#trabajo">cerrar ✕</a>
+    <span class="corner bl">Dima Smola</span>
+    <span class="corner br">identidad · 2026</span>
+  </section>
+
+  <section class="case-text">
+    <h1>Dima Smola</h1>
+    <div>
+      <p class="lead">Sus relieves cambian según les da la luz. La marca tenía que apartarse para no competir con ellos.</p>
+      <div class="body">
+        <p>Su competencia se vende como decoración, con serifas clásicas y tonos arena. Lo situé como artista: descriptor "Sculptural Surfaces", claim "Shaped by light" y una paleta mineral sin color de acento, porque el color ya lo pone la obra.</p>
+        <p>El sello D sale de un boceto a mano. Lo convertí en sistema: firma, sello, manual de 25 láminas, tarjeta gofrada, certificado de autenticidad, web y plantillas de Instagram.</p>
+      </div>
+      <p class="credit">Cliente real · Proyecto completo en solitario · Fotografía de obra: Dima Smola</p>
+    </div>
+  </section>
+
+  <section class="plates" aria-label="Imágenes del proyecto">
+    <div class="plate"><img src="img/dima-logos.webp" alt="Sistema de logotipo"></div>
+    <div class="plate"><img src="img/dima-origen.webp" alt="Del boceto a lápiz al sello D"></div>
+    <div class="quad">
+      <img src="img/dima-sinapsis.webp" alt="Detalle de Sinapsis">
+      <img src="img/dima-cobre.webp" alt="Detalle de la obra en cobre">
+      <img src="img/dima-duna.webp" alt="Detalle de Duna">
+      <img src="img/dima-violeta.webp" alt="Detalle de Colapso">
+    </div>
+    <div class="plate"><img src="img/dima-paleta.webp" alt="Paleta mineral"></div>
+    <div class="duo">
+      <img src="img/dima-tarjeta.webp" alt="Tarjeta de visita" style="aspect-ratio:auto;height:auto">
+      <img src="img/dima-certificado.webp" alt="Certificado y etiquetas" style="aspect-ratio:auto;height:auto">
+    </div>
+    <div class="plate"><img src="img/dima-web.webp" alt="Web de Dima Smola"></div>
+    <div class="plate"><img src="img/dima-instagram.webp" alt="Plantillas de Instagram"></div>
+  </section>
+
+  <a class="next" href="#metropoli"><span class="small">Siguiente</span><b>Metropoli →</b></a>
+  <footer><span>© 2026 Belén Pérez</span><span>Vega Baja, Alicante</span></footer>
+</div>
+
+<!-- ================= PROYECTO: METROPOLI ================= -->
+<div id="metropoli" class="case" hidden>
+  <section class="open two" aria-label="Apertura del proyecto">
+    <img src="img/metropoli-apertura.webp" alt="Fotografía en rojo de un beso, del reportaje sobre Lubalin y Ginzburg">
+    <img src="img/metropoli-herb-lubalin.webp" alt="Página de apertura sobre Herb Lubalin con letras de Avant Garde superpuestas" style="object-position:50% 40%">
+    <a class="corner tl logo" href="#"><span class="h">hola</span> belén</a>
+    <a class="corner tr" href="#trabajo">cerrar ✕</a>
+    <span class="corner bl">Metropoli</span>
+    <span class="corner br">editorial · 2025</span>
+  </section>
+
+  <section class="case-text">
+    <h1>Metropoli</h1>
+    <div>
+      <p class="lead">Una revista de tendencias de diseño que dedica sus interiores a Herb Lubalin y David Carson, y los maqueta con las reglas de cada uno.</p>
+      <div class="body">
+        <p>Diseñé la cabecera, el sumario y los interiores. El sumario son siete cuartos de círculo que giran por el pliego, uno por sección, en rojo y negro. Hice también una versión a dos tintas.</p>
+        <p>Los interiores cambian de registro según de quién hablan. Las páginas de Lubalin y Ginzburg recorren Eros, Fact, Avant Garde y Moneysworth con titulares apretados y letras que se pisan. Las de Carson rompen la retícula y ensucian la imagen, como hacía él en Ray Gun.</p>
+      </div>
+      <p class="credit">Proyecto académico individual · Mayo 2025 · Textos propios · Imágenes de archivo de las revistas citadas</p>
+    </div>
+  </section>
+
+  <section class="plates" aria-label="Imágenes del proyecto">
+    <div class="plate"><img src="img/metropoli-sumario.webp" alt="Pliego del sumario con siete cuartos de círculo rojos" loading="lazy"></div>
+    <div class="duo pages">
+      <img src="img/metropoli-herb-lubalin.webp" alt="Apertura del reportaje sobre Herb Lubalin" loading="lazy">
+      <img src="img/metropoli-lubalin-ginzburg.webp" alt="Página sobre la colaboración de Lubalin y Ginzburg" loading="lazy">
+    </div>
+    <div class="duo pages">
+      <img src="img/metropoli-eros.webp" alt="Página sobre la revista Eros, de 1962" loading="lazy">
+      <img src="img/metropoli-fact.webp" alt="Página sobre las revistas Fact y Avant Garde con papel rasgado" loading="lazy">
+    </div>
+    <div class="duo pages">
+      <img src="img/metropoli-moneysworth.webp" alt="Página sobre la revista Moneysworth" loading="lazy">
+      <img src="img/metropoli-avant-garde.webp" alt="Página sobre la labor de Lubalin en Avant Garde" loading="lazy">
+    </div>
+    <div class="duo pages">
+      <img src="img/metropoli-carson.webp" alt="Página sobre David Carson con portadas de Ray Gun" loading="lazy">
+      <img src="img/metropoli-carson-legado.webp" alt="Página roja sobre el legado de David Carson" loading="lazy">
+    </div>
+    <div class="plate"><img src="img/metropoli-mockup.webp" alt="Pliego impreso con el texto Diseño en transformación y el sumario a color" loading="lazy"></div>
+  </section>
+
+  <a class="next" href="#mayte"><span class="small">Siguiente</span><b>Peluquería Mayte →</b></a>
+  <footer><span>© 2026 Belén Pérez</span><span>Vega Baja, Alicante</span></footer>
+</div>
+
+<!-- ================= PROYECTO: PELUQUERÍA MAYTE ================= -->
+<div id="mayte" class="case" hidden>
+  <section class="open two" aria-label="Apertura del proyecto">
+    <img src="img/mayte-melena.webp" alt="Melena amarilla dibujada que termina en unos labios magenta" style="object-position:50% 70%">
+    <img src="img/mayte-caja-qr.webp" alt="Caja amarilla de Peluquería Mayte con código QR, fotografiada contra la pared">
+    <a class="corner tl logo" href="#"><span class="h">hola</span> belén</a>
+    <a class="corner tr" href="#trabajo">cerrar ✕</a>
+    <span class="corner bl">Peluquería Mayte</span>
+    <span class="corner br">identidad · packaging</span>
+  </section>
+
+  <section class="case-text">
+    <h1>Peluquería Mayte</h1>
+    <div>
+      <p class="lead">El monograma junta la M de Mayte con unas tijeras abiertas. Todo lo demás se pinta en amarillo y magenta.</p>
+      <div class="body">
+        <p>Buscaba un signo que funcionara pequeño, en una tarjeta o en el lateral de una caja. Las patas de la M son las hojas de las tijeras. Lo acompañan dos colores planos y una melena dibujada que termina en unos labios.</p>
+        <p>Con esas piezas monté la papelería completa, con cartas, sobres americanos y tarjetas, cajas troqueladas para productos que construí y fotografié, publicaciones para redes y un mupi.</p>
+      </div>
+      <p class="credit">Clienta real · Fotografías de modelos en redes y mupi: banco de imágenes</p>
+    </div>
+  </section>
+
+  <section class="plates" aria-label="Imágenes del proyecto">
+    <div class="duo pages">
+      <img src="img/mayte-monograma.webp" alt="Monograma en negro con el nombre Peluquería Mayte" loading="lazy">
+      <img src="img/mayte-carta-diagonal.webp" alt="Hoja con franjas diagonales amarillas y el monograma" loading="lazy">
+    </div>
+    <div class="plate"><img src="img/mayte-papeleria.webp" alt="Mockup de carpeta, tarjetas y sobre de Peluquería Mayte" loading="lazy"></div>
+    <div class="duo pages">
+      <img src="img/mayte-carta.webp" alt="Carta corporativa con la melena amarilla" loading="lazy">
+      <img src="img/mayte-melena.webp" alt="Hoja con la melena amarilla y los labios magenta" loading="lazy">
+    </div>
+    <div class="duo pages">
+      <img src="img/mayte-tarjeta-logo.webp" alt="Tarjeta de visita, cara del logotipo" loading="lazy">
+      <img src="img/mayte-tarjeta-datos.webp" alt="Tarjeta de visita, cara de los datos" loading="lazy">
+    </div>
+    <div class="duo pages">
+      <img src="img/mayte-sobre-magenta.webp" alt="Sobre americano magenta desplegado" loading="lazy">
+      <img src="img/mayte-sobre-amarillo.webp" alt="Sobre americano amarillo desplegado" loading="lazy">
+    </div>
+    <div class="duo">
+      <img src="img/mayte-envase.webp" alt="Envase alto con la melena y los labios" loading="lazy">
+      <img src="img/mayte-bloom.webp" alt="Caja de producto Bloom Hair" loading="lazy">
+    </div>
+    <div class="duo">
+      <img src="img/mayte-caja-lateral.webp" alt="Lateral de caja con los datos de la peluquería" loading="lazy">
+      <img src="img/mayte-hexagonal.webp" alt="Envase hexagonal amarillo y blanco" loading="lazy">
+    </div>
+    <div class="duo">
+      <img src="img/mayte-carrusel-logo.webp" alt="Publicación de Instagram con el logotipo en magenta" loading="lazy">
+      <img src="img/mayte-carrusel-tijeras.webp" alt="Publicación de Instagram con unas tijeras cortando pelo" loading="lazy">
+    </div>
+    <div class="plate"><img src="img/mayte-mupi.webp" alt="Mupi en la calle con la campaña Tu belleza, nuestra pasión" loading="lazy"></div>
+  </section>
+
+  <a class="next" href="#stussy"><span class="small">Siguiente</span><b>Stüssy →</b></a>
+  <footer><span>© 2026 Belén Pérez</span><span>Vega Baja, Alicante</span></footer>
+</div>
+
+<!-- ================= PROYECTO: STÜSSY ================= -->
+<div id="stussy" class="case" hidden>
+  <section class="open two" aria-label="Apertura del proyecto">
+    <img src="img/stussy-aero-apertura.webp" alt="Dirección Aero: web con cielo azul, ventana de sistema y burbujas de cristal" style="object-position:50% 20%">
+    <img src="img/stussy-grunge-productos.webp" alt="Dirección Grunge: collage rojo y negro con productos">
+    <a class="corner tl logo" href="#"><span class="h">hola</span> belén</a>
+    <a class="corner tr" href="#trabajo">cerrar ✕</a>
+    <span class="corner bl">Stüssy</span>
+    <span class="corner br">web · proyecto especulativo</span>
+  </section>
+
+  <section class="case-text">
+    <div>
+      <h1>Stüssy</h1>
+      <p class="tag">Proyecto especulativo</p>
+    </div>
+    <div>
+      <p class="lead">Dos tiendas online para Stüssy que no se parecen en nada. Una es de cristal y cielo azul, la otra de fotocopia y cinta.</p>
+      <div class="body">
+        <p>La dirección Aero recupera la estética de los escritorios de los 2000. Fondo de cielo, ventanas de sistema operativo y productos metidos en burbujas de cristal que se pinchan para ver la ficha.</p>
+        <p>La dirección Grunge va al otro extremo. Collage en rojo y negro, recortes, estallidos y una tipografía rota para la sección de más vendidos y una promoción de noviembre.</p>
+      </div>
+      <p class="credit">Proyecto especulativo, sin encargo ni relación con la marca · Proyecto académico · Fotografías de producto y modelos: Stüssy</p>
+    </div>
+  </section>
+
+  <section class="plates" aria-label="Imágenes del proyecto">
+    <div class="duo pages">
+      <img src="img/stussy-aero-web.webp" alt="Página completa de la dirección Aero" loading="lazy">
+      <img src="img/stussy-grunge-web.webp" alt="Página completa de la dirección Grunge" loading="lazy">
+    </div>
+    <div class="quad sq">
+      <img src="img/stussy-burbuja-chaqueta.webp" alt="Chaqueta varsity dentro de una burbuja de cristal" loading="lazy">
+      <img src="img/stussy-burbuja-camiseta.webp" alt="Camiseta azul dentro de una burbuja de cristal" loading="lazy">
+      <img src="img/stussy-burbuja-gorra.webp" alt="Gorra negra dentro de una burbuja de cristal" loading="lazy">
+      <img src="img/stussy-burbuja-sudadera.webp" alt="Sudadera dentro de una burbuja de cristal" loading="lazy">
+    </div>
+    <div class="plate panel dark"><img src="img/stussy-grunge-productos.webp" alt="Collage de productos de la dirección Grunge" loading="lazy"></div>
+  </section>
+
+  <a class="next" href="#senaletica"><span class="small">Siguiente</span><b>Señalética →</b></a>
+  <footer><span>© 2026 Belén Pérez</span><span>Vega Baja, Alicante</span></footer>
+</div>
+
+<!-- ================= PROYECTO: SEÑALÉTICA ================= -->
+<div id="senaletica" class="case" hidden>
+  <section class="open two" aria-label="Apertura del proyecto">
+    <img src="img/senaletica-fachada.webp" alt="Banderola de producción audiovisual en una fachada de hormigón">
+    <img src="img/senaletica-cafeteria.webp" alt="Rótulo de cafetería en la esquina de un edificio">
+    <a class="corner tl logo" href="#"><span class="h">hola</span> belén</a>
+    <a class="corner tr" href="#trabajo">cerrar ✕</a>
+    <span class="corner bl">Señalética</span>
+    <span class="corner br">pictogramas</span>
+  </section>
+
+  <section class="case-text">
+    <h1>Señalética</h1>
+    <div>
+      <p class="lead">Trece pictogramas para moverse por la EASDO, mi escuela, del aula de realidad virtual a la repografía.</p>
+      <div class="body">
+        <p>Todos comparten el mismo trazo grueso de puntas redondas y el mismo círculo con degradado de amarillo a magenta, para que se lean como una familia aunque el objeto cambie.</p>
+        <p>El nombre va debajo, en mayúsculas de palo seco. Después los apliqué en una banderola de fachada y en el rótulo de la cafetería.</p>
+      </div>
+      <p class="credit">Proyecto académico · Mockups sobre plantillas de terceros</p>
+    </div>
+  </section>
+
+  <section class="plates" aria-label="Imágenes del proyecto">
+    <div class="grid4">
+      <img src="img/senaletica-01.webp" alt="Pictograma Producción audiovisual" loading="lazy">
+      <img src="img/senaletica-02.webp" alt="Pictograma Lavabo accesible" loading="lazy">
+      <img src="img/senaletica-03.webp" alt="Pictograma Aula polivalente" loading="lazy">
+      <img src="img/senaletica-04.webp" alt="Pictograma Diseño gráfico" loading="lazy">
+      <img src="img/senaletica-05.webp" alt="Pictograma Realidad virtual" loading="lazy">
+      <img src="img/senaletica-06.webp" alt="Pictograma Administración" loading="lazy">
+      <img src="img/senaletica-07.webp" alt="Pictograma Repografía" loading="lazy">
+      <img src="img/senaletica-08.webp" alt="Pictograma Lavabo masculino" loading="lazy">
+      <img src="img/senaletica-09.webp" alt="Pictograma Botiquín" loading="lazy">
+      <img src="img/senaletica-10.webp" alt="Pictograma Lavabo femenino" loading="lazy">
+      <img src="img/senaletica-11.webp" alt="Pictograma Biblioteca" loading="lazy">
+      <img src="img/senaletica-12.webp" alt="Pictograma Cafetería" loading="lazy">
+      <img src="img/senaletica-13.webp" alt="Pictograma Almacén" loading="lazy">
+      <img class="span3" src="img/senaletica-cafeteria.webp" alt="Rótulo de cafetería aplicado en un edificio" loading="lazy">
+    </div>
+    <div class="plate"><img src="img/senaletica-fachada.webp" alt="Banderola de producción audiovisual en fachada" loading="lazy"></div>
+  </section>
+
+  <a class="next" href="#cometas"><span class="small">Siguiente</span><b>Cometas →</b></a>
+  <footer><span>© 2026 Belén Pérez</span><span>Vega Baja, Alicante</span></footer>
+</div>
+
+<!-- ================= PROYECTO: COMETAS ================= -->
+<div id="cometas" class="case" hidden>
+  <section class="open two" aria-label="Apertura del proyecto">
+    <img src="img/cometas-cartel.webp" alt="Cartel de Cometas: una cometa roja, verde y negra sobre un cielo dibujado a mano">
+    <img src="img/cometas-flyer.webp" alt="Flyer plegado de la exposición sobre fondo granate y madera">
+    <a class="corner tl logo" href="#"><span class="h">hola</span> belén</a>
+    <a class="corner tr" href="#trabajo">cerrar ✕</a>
+    <span class="corner bl">Cometas</span>
+    <span class="corner br">cartel e identidad · 2025</span>
+  </section>
+
+  <section class="case-text">
+    <h1>Cometas</h1>
+    <div>
+      <p class="lead">Una propuesta de exposición sobre la infancia que crece entre ruinas, contada con una cometa y un hilo rojo.</p>
+      <div class="body">
+        <p>La cometa toma los colores de la bandera palestina y la silueta de su mapa. La dibujé sobre un cielo de trazos infantiles, con un sol triste, porque la exposición habla de un juego que se interrumpe.</p>
+        <p>La identidad pasa al cartel, a un flyer plegado en castellano y en árabe, a la entrada, a la señalética de sala y a una bolsa. El flyer cierra con la frase que resume el recorrido, «Solo un hilo rojo mantiene en pie todas las cometas».</p>
+      </div>
+      <p class="credit">Proyectos Interdisciplinares · 3º de Diseño Gráfico · Propuesta de exposición para el Centro Cultural Las Cigarreras, del 10 al 23 de octubre de 2025</p>
+    </div>
+  </section>
+
+  <section class="plates" aria-label="Imágenes del proyecto">
+    <div class="plate panel"><img src="img/cometas-logo.webp" alt="Logotipo de Cometas: la cometa con la silueta del mapa y el nombre en castellano y árabe" loading="lazy"></div>
+    <div class="plate"><img src="img/cometas-cartel-pared.webp" alt="Cartel pegado en una pared desconchada" loading="lazy"></div>
+    <div class="duo">
+      <img src="img/cometas-flyer.webp" alt="Flyer en castellano abierto" loading="lazy">
+      <img src="img/cometas-flyer-arabe.webp" alt="Flyer en árabe abierto" loading="lazy">
+    </div>
+    <div class="plate"><img src="img/cometas-entrada.webp" alt="Entrada de la exposición con código QR" loading="lazy"></div>
+    <div class="plate"><img src="img/cometas-senaletica.webp" alt="Señalética de sala con postes de madera" loading="lazy"></div>
+    <div class="plate"><img src="img/cometas-grupo-reducido.webp" alt="Cartel de sala: grupo reducido, máximo dos personas" loading="lazy"></div>
+    <div class="duo">
+      <img src="img/cometas-movil.webp" alt="Cartel adaptado a la pantalla de un móvil" loading="lazy">
+      <img src="img/cometas-bolsa.webp" alt="Bolsa de tela con el lema Recoge lo que el viento dejó" loading="lazy">
+    </div>
+  </section>
+
+  <a class="next" href="#dima-smola"><span class="small">Siguiente</span><b>Dima Smola →</b></a>
+  <footer><span>© 2026 Belén Pérez</span><span>Vega Baja, Alicante</span></footer>
+</div>
+
+<script>
+/* Navegación: #dima-smola abre el proyecto; cualquier otro ancla vuelve a la home */
+(function(){
+  var projects=['dima-smola','metropoli','mayte','stussy','senaletica','cometas'];
+  function route(){
+    var h=location.hash.slice(1), isProj=projects.indexOf(h)>-1;
+    document.getElementById('home').hidden=isProj;
+    projects.forEach(function(p){document.getElementById(p).hidden=(p!==h);});
+    if(isProj){window.scrollTo(0,0);}
+    else if(h){var el=document.getElementById(h); if(el) el.scrollIntoView();}
+  }
+  window.addEventListener('hashchange',route); route();
+})();
+</script>
