@@ -152,7 +152,7 @@ footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;paddin
     <img src="img/dima-hero.webp" alt="Relieve Sinapsis colgado en pared" style="object-position:40% 50%">
     <img src="img/dima-violeta.webp" alt="Detalle de Colapso, camaleón violeta">
     <a class="corner tl logo" href="#"><span class="h">hola</span> belén</a>
-    <a class="corner tr" href="#trabajo">cerrar ✕</a>
+    <a class="corner tr" href="#">cerrar ✕</a>
     <span class="corner bl">Dima Smola</span>
     <span class="corner br">identidad · 2026</span>
   </section>
@@ -197,7 +197,7 @@ footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;paddin
     <img src="img/metropoli-apertura.webp" alt="Fotografía en rojo de un beso, del reportaje sobre Lubalin y Ginzburg">
     <img src="img/metropoli-herb-lubalin.webp" alt="Página de apertura sobre Herb Lubalin con letras de Avant Garde superpuestas" style="object-position:50% 40%">
     <a class="corner tl logo" href="#"><span class="h">hola</span> belén</a>
-    <a class="corner tr" href="#trabajo">cerrar ✕</a>
+    <a class="corner tr" href="#">cerrar ✕</a>
     <span class="corner bl">Metropoli</span>
     <span class="corner br">editorial · 2025</span>
   </section>
@@ -245,7 +245,7 @@ footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;paddin
     <img src="img/mayte-melena.webp" alt="Melena amarilla dibujada que termina en unos labios magenta" style="object-position:50% 70%">
     <img src="img/mayte-caja-qr.webp" alt="Caja amarilla de Peluquería Mayte con código QR, fotografiada contra la pared">
     <a class="corner tl logo" href="#"><span class="h">hola</span> belén</a>
-    <a class="corner tr" href="#trabajo">cerrar ✕</a>
+    <a class="corner tr" href="#">cerrar ✕</a>
     <span class="corner bl">Peluquería Mayte</span>
     <span class="corner br">identidad · packaging</span>
   </section>
@@ -305,7 +305,7 @@ footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;paddin
     <img src="img/stussy-aero-apertura.webp" alt="Dirección Aero: web con cielo azul, ventana de sistema y burbujas de cristal" style="object-position:50% 20%">
     <img src="img/stussy-grunge-productos.webp" alt="Dirección Grunge: collage rojo y negro con productos">
     <a class="corner tl logo" href="#"><span class="h">hola</span> belén</a>
-    <a class="corner tr" href="#trabajo">cerrar ✕</a>
+    <a class="corner tr" href="#">cerrar ✕</a>
     <span class="corner bl">Stüssy</span>
     <span class="corner br">web · proyecto especulativo</span>
   </section>
@@ -349,7 +349,7 @@ footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;paddin
     <img src="img/senaletica-fachada.webp" alt="Banderola de producción audiovisual en una fachada de hormigón">
     <img src="img/senaletica-cafeteria.webp" alt="Rótulo de cafetería en la esquina de un edificio">
     <a class="corner tl logo" href="#"><span class="h">hola</span> belén</a>
-    <a class="corner tr" href="#trabajo">cerrar ✕</a>
+    <a class="corner tr" href="#">cerrar ✕</a>
     <span class="corner bl">Señalética</span>
     <span class="corner br">pictogramas</span>
   </section>
@@ -396,7 +396,7 @@ footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;paddin
     <img src="img/cometas-cartel.webp" alt="Cartel de Cometas: una cometa roja, verde y negra sobre un cielo dibujado a mano">
     <img src="img/cometas-flyer.webp" alt="Flyer plegado de la exposición sobre fondo granate y madera">
     <a class="corner tl logo" href="#"><span class="h">hola</span> belén</a>
-    <a class="corner tr" href="#trabajo">cerrar ✕</a>
+    <a class="corner tr" href="#">cerrar ✕</a>
     <span class="corner bl">Cometas</span>
     <span class="corner br">cartel e identidad · 2025</span>
   </section>
@@ -441,7 +441,7 @@ footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;paddin
     var h=location.hash.slice(1), isProj=projects.indexOf(h)>-1;
     document.getElementById('home').hidden=isProj;
     projects.forEach(function(p){document.getElementById(p).hidden=(p!==h);});
-    if(isProj){window.scrollTo(0,0);}
+    if(isProj){window.scrollTo({top:0,left:0,behavior:"instant"});}
     else if(h){var el=document.getElementById(h); if(el) el.scrollIntoView();}
   }
   window.addEventListener('hashchange',route); route();
