@@ -2,28 +2,51 @@
 <html lang="es">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>hola belén</title>
-<link rel="alternate" hreflang="en" href="en/">
-<meta name="description" content="Belén Pérez, diseñadora gráfica. Identidad y diseño editorial.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23141414%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-family=%27Arial%27 font-weight=%27700%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%23F5F2EC%27%3Eb%3C/text%3E%3C/svg%3E">
+<title>Belén Pérez · Diseñadora gráfica en Alicante | Hola Belén</title>
+<meta name="description" content="Portfolio de Belén Pérez, diseñadora gráfica en Orihuela (Alicante). Identidad, diseño editorial, packaging y web. Busco prácticas en Alicante y Murcia.">
+<!-- SEO -->
+<link rel="canonical" href="https://blnnprzinfo-crypto.github.io/holabelen/">
+<link rel="alternate" hreflang="es" href="https://blnnprzinfo-crypto.github.io/holabelen/">
+<link rel="alternate" hreflang="en" href="https://blnnprzinfo-crypto.github.io/holabelen/en/">
+<link rel="alternate" hreflang="x-default" href="https://blnnprzinfo-crypto.github.io/holabelen/">
+<meta name="theme-color" content="#1A1AEB">
+<meta name="author" content="Belén Pérez">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hola Belén">
+<meta property="og:title" content="Belén Pérez · Diseñadora gráfica en Alicante | Hola Belén">
+<meta property="og:description" content="Portfolio de Belén Pérez, diseñadora gráfica en Orihuela (Alicante). Identidad, diseño editorial, packaging y web. Busco prácticas en Alicante y Murcia.">
+<meta property="og:url" content="https://blnnprzinfo-crypto.github.io/holabelen/">
+<meta property="og:image" content="https://blnnprzinfo-crypto.github.io/holabelen/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Hola Belén, diseño gráfico">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Belén Pérez", "url": "https://blnnprzinfo-crypto.github.io/holabelen/", "image": "https://blnnprzinfo-crypto.github.io/holabelen/img/belen-perez.webp", "sameAs": ["https://www.linkedin.com/in/belnprez"], "address": {"@type": "PostalAddress", "addressLocality": "Orihuela", "addressRegion": "Alicante", "addressCountry": "ES"}, "alumniOf": {"@type": "EducationalOrganization", "name": "EASDO, Escuela de Arte y Superior de Diseño de Orihuela"}, "jobTitle": "Diseñadora gráfica", "knowsAbout": ["Identidad visual", "Diseño editorial", "Packaging", "Diseño web", "Señalética"]}</script>
+<!-- /SEO -->
+<link rel="icon" href="img/marca/simbolo-azul.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,760&family=Inter:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap">
 <link rel="stylesheet" href="site.css">
 
 <a class="skip" href="#trabajo">Saltar al trabajo</a>
 <header class="site-head">
-  <a class="logo" href="#"><span class="h">hola</span> belén</a>
+  <a class="brand" href="#" aria-label="Hola Belén, inicio"><img class="on-white" src="img/marca/logo-azul.svg" alt="" width="339" height="160"><img class="on-blue" src="img/marca/logo-blanco.svg" alt="" width="339" height="160"></a>
   <nav aria-label="Principal"><a href="#trabajo" data-sec="trabajo">Trabajo</a><a href="#info" data-sec="info">Info</a><a href="en/" hreflang="en" lang="en">EN</a></nav>
 </header>
 
 <!-- ================= HOME ================= -->
 <div id="home">
-  <section class="open hero" aria-label="Portada">
-    <img src="img/dima-ola.webp" alt="Detalle de un relieve de Dima Smola con reflejos perlados">
-    <img src="img/dima-cobre.webp" alt="Detalle de una obra de Dima Smola en cobre">
-    <p class="wordmark logo" aria-label="hola belén"><span class="h">hola</span> <span>belén</span></p>
-    <span class="corner br credit-img">Dima Smola, 2026</span>
+  <section class="hero" aria-label="Portada">
+    <h1 class="sr">Hola, soy Belén Pérez, diseñadora gráfica</h1>
+    <div class="hero-mark" aria-hidden="true">
+      <img class="belen" src="img/marca/belen-blanco.svg" alt="" width="422" height="97">
+      <span class="dg">diseño gráfico</span>
+    </div>
+    <img class="hola" src="img/marca/hola-blanco.svg" alt="" width="374" height="180" aria-hidden="true">
+    <p class="hero-foot"><span>Portfolio 2026</span><span>Orihuela, Alicante</span></p>
   </section>
 
   <section class="intro wrap">
@@ -33,12 +56,13 @@
   </section>
 
   <section class="index wrap" id="trabajo" aria-labelledby="t-trabajo">
-    <h2 id="t-trabajo">Trabajo</h2>
+    <h2 id="t-trabajo" class="sec-title">Trabajo</h2>
     <ol>
       <li><a href="#dima-smola" data-img="img/dima-hero.webp"><span class="t">Dima Smola</span><span class="d">Identidad</span><span class="k">Cliente real</span><span class="y">2026</span></a></li>
       <li><a href="#metropoli" data-img="img/metropoli-herb-lubalin.webp"><span class="t">Metropoli</span><span class="d">Editorial</span><span class="k">Académico</span><span class="y">2025</span></a></li>
       <li><a href="#mayte" data-img="img/mayte-papeleria.webp"><span class="t">Peluquería Mayte</span><span class="d">Identidad y packaging</span><span class="k">Cliente real</span><span class="y"></span></a></li>
-      <li><a href="#stussy" data-img="img/stussy-aero-apertura.webp"><span class="t">Stüssy</span><span class="d">Web</span><span class="k">Especulativo</span><span class="y"></span></a></li>
+      <li><a href="#stussy-aero" data-img="img/stussy-aero-apertura.webp"><span class="t">Stüssy Aero</span><span class="d">Web</span><span class="k">Especulativo</span><span class="y">2025/26</span></a></li>
+      <li><a href="#stussy-grunge" data-img="img/stussy-grunge-productos.webp"><span class="t">Stüssy Grunge</span><span class="d">Web</span><span class="k">Especulativo</span><span class="y">2025/26</span></a></li>
       <li><a href="#senaletica" data-img="img/senaletica-fachada.webp"><span class="t">Señalética</span><span class="d">Pictogramas</span><span class="k">Académico</span><span class="y"></span></a></li>
       <li><a href="#cometas" data-img="img/cometas-cartel-pared.webp"><span class="t">Cometas</span><span class="d">Cartel e identidad</span><span class="k">Académico</span><span class="y">2025</span></a></li>
     </ol>
@@ -48,34 +72,38 @@
   <section class="work" aria-label="Proyectos destacados">
     <a class="proj right" href="#dima-smola">
       <figure><img src="img/dima-hero.webp" alt="Relieve escultórico gris de Dima Smola"></figure>
-      <div class="cap"><h3>Dima Smola</h3><div><p>Identidad para un escultor cuyas superficies cambian con la luz.</p><span class="more small">Más detalles</span></div></div>
+      <div class="cap"><h3>Dima Smola</h3><div><p>Identidad para un escultor cuyas superficies cambian con la luz.</p><span class="more">Más detalles</span></div></div>
     </a>
     <a class="proj left" href="#metropoli">
       <figure class="panel" style="background:#141414"><img src="img/metropoli-herb-lubalin.webp" alt="Página de apertura sobre Herb Lubalin en la revista Metropoli" loading="lazy"></figure>
-      <div class="cap"><h3>Metropoli</h3><div><p>Revista de tendencias de diseño: cabecera, sumario e interiores.</p><span class="more small">Más detalles</span></div></div>
+      <div class="cap"><h3>Metropoli</h3><div><p>Revista de tendencias de diseño: cabecera, sumario e interiores.</p><span class="more">Más detalles</span></div></div>
     </a>
     <a class="proj right" href="#mayte">
       <figure class="panel" style="background:#FFFFFF"><img src="img/mayte-monograma.webp" alt="Monograma de Peluquería Mayte, una M formada por unas tijeras" loading="lazy"></figure>
-      <div class="cap"><h3>Peluquería Mayte</h3><div><p>Monograma, papelería y packaging para una peluquería de barrio.</p><span class="more small">Más detalles</span></div></div>
+      <div class="cap"><h3>Peluquería Mayte</h3><div><p>Monograma, papelería y packaging para una peluquería de barrio.</p><span class="more">Más detalles</span></div></div>
     </a>
-    <a class="proj left" href="#stussy">
-      <figure><img src="img/stussy-aero-apertura.webp" alt="Propuesta web Aero para Stüssy, con ventanas de sistema y burbujas" style="object-position:50% 25%" loading="lazy"></figure>
-      <div class="cap"><h3>Stüssy</h3><div><p>Rediseño web especulativo en dos direcciones: Aero y Grunge.</p><span class="more small">Más detalles</span></div></div>
+    <a class="proj left" href="#stussy-aero">
+      <figure><img src="img/stussy-aero-apertura.webp" alt="Dirección Aero de la tienda de Stüssy, con ventana de sistema y burbujas" style="object-position:50% 25%" loading="lazy"></figure>
+      <div class="cap"><h3>Stüssy Aero</h3><div><p>Tienda online especulativa de Stüssy con la estética Frutiger Aero de los 2000.</p><span class="more">Más detalles</span></div></div>
     </a>
-    <a class="proj right" href="#senaletica">
+    <a class="proj right" href="#stussy-grunge">
+      <figure><img src="img/stussy-grunge-productos.webp" alt="Collage rojo y negro de productos de la dirección Grunge" style="object-position:50% 30%" loading="lazy"></figure>
+      <div class="cap"><h3>Stüssy Grunge</h3><div><p>La misma tienda convertida en un fanzine de papel rasgado, en rojo y negro.</p><span class="more">Más detalles</span></div></div>
+    </a>
+    <a class="proj left" href="#senaletica">
       <figure><img src="img/senaletica-fachada.webp" alt="Banderola de producción audiovisual en una fachada de hormigón" loading="lazy"></figure>
-      <div class="cap"><h3>Señalética</h3><div><p>Pictogramas para aulas, servicios y zonas comunes, aplicados en soporte real.</p><span class="more small">Más detalles</span></div></div>
+      <div class="cap"><h3>Señalética</h3><div><p>Pictogramas para aulas, servicios y zonas comunes, aplicados en soporte real.</p><span class="more">Más detalles</span></div></div>
     </a>
-    <a class="proj left" href="#cometas">
+    <a class="proj right" href="#cometas">
       <figure><img src="img/cometas-cartel-pared.webp" alt="Cartel de Cometas pegado en una pared desconchada" loading="lazy"></figure>
-      <div class="cap"><h3>Cometas</h3><div><p>Cartel e identidad para una propuesta de exposición en Las Cigarreras, Alicante.</p><span class="more small">Más detalles</span></div></div>
+      <div class="cap"><h3>Cometas</h3><div><p>Cartel e identidad para una propuesta de exposición en Las Cigarreras, Alicante.</p><span class="more">Más detalles</span></div></div>
     </a>
   </section>
 
   <section class="info wrap" id="info">
     <figure class="me"><img src="img/belen-perez.webp" alt="Retrato de Belén Pérez con americana negra sobre fondo oscuro" width="1334" height="2000" loading="lazy"></figure>
     <div class="about">
-      <h2>Info</h2>
+      <h2>Info <img class="cara" src="img/marca/mano-cara-azul.svg" alt="" width="23" height="34" aria-hidden="true"></h2>
       <p class="big">Soy Belén Pérez, estudiante de 4º de Diseño Gráfico en la EASDO, en Orihuela. Trabajo identidad y diseño editorial.</p>
       <p>También tatúo línea fina: me ha enseñado a bocetar mucho antes de trazar, porque un trazo hecho no se borra.</p>
       <dl>
@@ -86,11 +114,19 @@
     </div>
   </section>
 
-  <section class="contact wrap" id="contacto">
-    <p>¿Tienes un estudio y buscas a alguien en prácticas? Escríbeme.</p>
-    <a class="mail" href="mailto:blnn.przinfo@gmail.com">blnn.przinfo@gmail.com</a>
+  <section class="contact" id="contacto">
+    <div class="wrap">
+      <img class="mano" src="img/marca/mano-disenemos-blanco.svg" alt="¡Diseñemos juntos!" width="265" height="53">
+      <p>¿Tienes un estudio y buscas a alguien en prácticas? Escríbeme.</p>
+      <a class="mail" href="mailto:blnn.przinfo@gmail.com">blnn.przinfo@gmail.com</a>
+      <ul class="social" aria-label="Contacto">
+        <li><a href="https://www.linkedin.com/in/belnprez"><img src="img/marca/mano-in-blanco.svg" alt="LinkedIn" width="31" height="26"></a></li>
+        <li><a href="mailto:blnn.przinfo@gmail.com"><img src="img/marca/mano-sobre-blanco.svg" alt="Email" width="31" height="22"></a></li>
+      </ul>
+      <img class="simbolo" src="img/marca/simbolo-blanco.svg" alt="" width="153" height="153" aria-hidden="true">
+    </div>
+    <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="https://www.linkedin.com/in/belnprez">LinkedIn</a><span>Vega Baja, Alicante</span></footer>
   </section>
-  <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="https://www.linkedin.com/in/belnprez">LinkedIn</a><span>Vega Baja, Alicante</span></footer>
 </div>
 
 <!-- ================= PROYECTO: DIMA SMOLA ================= -->
@@ -134,7 +170,7 @@
     <div class="plate"><img src="img/dima-instagram.webp" alt="Plantillas de Instagram"></div>
   </section>
 
-  <a class="next wrap" href="#metropoli"><span>Siguiente proyecto</span><b>Metropoli</b></a>
+  <a class="next" href="#metropoli"><span class="wrap"><span>Siguiente proyecto</span><b>Metropoli</b></span></a>
   <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="#info">Info</a><span>Vega Baja, Alicante</span></footer>
 </div>
 
@@ -182,7 +218,7 @@
     <div class="plate"><img src="img/metropoli-mockup.webp" alt="Pliego impreso con el texto Diseño en transformación y el sumario a color" loading="lazy"></div>
   </section>
 
-  <a class="next wrap" href="#mayte"><span>Siguiente proyecto</span><b>Peluquería Mayte</b></a>
+  <a class="next" href="#mayte"><span class="wrap"><span>Siguiente proyecto</span><b>Peluquería Mayte</b></span></a>
   <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="#info">Info</a><span>Vega Baja, Alicante</span></footer>
 </div>
 
@@ -242,49 +278,84 @@
     <div class="plate"><img src="img/mayte-mupi.webp" alt="Mupi en la calle con la campaña Tu belleza, nuestra pasión" loading="lazy"></div>
   </section>
 
-  <a class="next wrap" href="#stussy"><span>Siguiente proyecto</span><b>Stüssy</b></a>
+  <a class="next" href="#stussy-aero"><span class="wrap"><span>Siguiente proyecto</span><b>Stüssy Aero</b></span></a>
   <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="#info">Info</a><span>Vega Baja, Alicante</span></footer>
 </div>
 
-<!-- ================= PROYECTO: STÜSSY ================= -->
-<div id="stussy" class="case" hidden>
+<!-- ================= PROYECTO: STÜSSY AERO ================= -->
+<div id="stussy-aero" class="case" hidden>
   <section class="open two" aria-label="Apertura del proyecto">
-    <img src="img/stussy-aero-apertura.webp" alt="Dirección Aero: web con cielo azul, ventana de sistema y burbujas de cristal" style="object-position:50% 20%">
-    <img src="img/stussy-grunge-productos.webp" alt="Dirección Grunge: collage rojo y negro con productos">
-    <span class="corner bl">Stüssy</span>
+    <img src="img/stussy-aero-apertura.webp" alt="Dirección Aero: web con cielo turquesa, ventana de sistema y burbujas de cristal" style="object-position:50% 20%">
+    <img src="img/stussy-burbuja-chaqueta.webp" alt="Chaqueta varsity dentro de una burbuja de cristal">
+    <span class="corner bl">Stüssy Aero</span>
     <span class="corner br">web · proyecto especulativo</span>
   </section>
 
   <header class="case-head wrap">
-    <h1>Stüssy</h1>
+    <h1>Stüssy Aero</h1>
     <p class="tag">Proyecto especulativo</p>
-    <dl class="meta" aria-label="Datos del proyecto"><div><dt>Tipo</dt><dd>Especulativo</dd></div><div><dt>Disciplinas</dt><dd>Diseño web</dd></div></dl>
+    <dl class="meta" aria-label="Datos del proyecto"><div><dt>Tipo</dt><dd>Especulativo</dd></div><div><dt>Disciplinas</dt><dd>Diseño web</dd></div><div><dt>Curso</dt><dd>2025/26</dd></div><div><dt>Estilo</dt><dd>Frutiger Aero</dd></div></dl>
   </header>
 
   <section class="case-text wrap">
-    <p class="lead">Dos tiendas online para Stüssy que no se parecen en nada. Una es de cristal y cielo azul, la otra de fotocopia y cinta.</p>
+    <p class="lead">La tienda online de Stüssy convertida en un escritorio de principios de los 2000, con cielo turquesa y productos dentro de burbujas.</p>
     <div class="body">
-        <p>La dirección Aero recupera la estética de los escritorios de los 2000. Fondo de cielo, ventanas de sistema operativo y productos metidos en burbujas de cristal que se pinchan para ver la ficha.</p>
-        <p>La dirección Grunge va al otro extremo. Collage en rojo y negro, recortes, estallidos y una tipografía rota para la sección de más vendidos y una promoción de noviembre.</p>
-      <p class="credit">Proyecto especulativo, sin encargo ni relación con la marca · Proyecto académico · Fotografías de producto y modelos: Stüssy</p>
+      <p>Esta dirección sale del Frutiger Aero, la estética optimista de las interfaces de aquellos años. Revisé la web de Disney Channel de 2008 y la de Windows Vista de 2007 y me quedé con sus degradados brillantes, los reflejos y las formas orgánicas.</p>
+      <p>El fondo es turquesa claro y los botones usan fucsia, rojo, verde y azul con efecto glossy. Los productos flotan en burbujas que se pinchan para ver la ficha. Por debajo, la página se ordena en módulos, igual que la versión Grunge.</p>
+      <p class="credit">Proyecto especulativo, sin encargo ni relación con la marca · Moodboard con referencias de terceros · Fotografías de producto y modelos: Stüssy</p>
     </div>
   </section>
 
   <section class="plates" aria-label="Imágenes del proyecto">
-    <div class="duo pages">
-      <img src="img/stussy-aero-web.webp" alt="Página completa de la dirección Aero" loading="lazy">
-      <img src="img/stussy-grunge-web.webp" alt="Página completa de la dirección Grunge" loading="lazy">
-    </div>
+    <div class="plate"><img src="img/stussy-aero-moodboard.webp" alt="Moodboard Frutiger Aero con degradados, burbujas y pantallas de los 2000" loading="lazy"></div>
+    <div class="plate"><img src="img/stussy-aero-wireframe.webp" alt="Wireframe de la dirección Aero" loading="lazy"></div>
+    <div class="plate web" style="background:#74F0FA"><img src="img/stussy-aero-web.webp" alt="Página completa de la dirección Aero" loading="lazy"></div>
     <div class="quad sq">
-      <img src="img/stussy-burbuja-chaqueta.webp" alt="Chaqueta varsity dentro de una burbuja de cristal" loading="lazy">
-      <img src="img/stussy-burbuja-camiseta.webp" alt="Camiseta azul dentro de una burbuja de cristal" loading="lazy">
-      <img src="img/stussy-burbuja-gorra.webp" alt="Gorra negra dentro de una burbuja de cristal" loading="lazy">
-      <img src="img/stussy-burbuja-sudadera.webp" alt="Sudadera dentro de una burbuja de cristal" loading="lazy">
+      <img src="img/stussy-burbuja-chaqueta.webp" alt="Chaqueta varsity dentro de una burbuja" loading="lazy">
+      <img src="img/stussy-burbuja-camiseta.webp" alt="Camiseta azul dentro de una burbuja" loading="lazy">
+      <img src="img/stussy-burbuja-gorra.webp" alt="Gorra negra dentro de una burbuja" loading="lazy">
+      <img src="img/stussy-burbuja-sudadera.webp" alt="Sudadera dentro de una burbuja" loading="lazy">
     </div>
-    <div class="plate panel dark"><img src="img/stussy-grunge-productos.webp" alt="Collage de productos de la dirección Grunge" loading="lazy"></div>
+    <div class="plate"><img src="img/stussy-aero-color.webp" alt="Gama cromática de la dirección Aero" loading="lazy"></div>
   </section>
 
-  <a class="next wrap" href="#senaletica"><span>Siguiente proyecto</span><b>Señalética</b></a>
+  <a class="next" href="#stussy-grunge"><span class="wrap"><span>Siguiente proyecto</span><b>Stüssy Grunge</b></span></a>
+  <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="#info">Info</a><span>Vega Baja, Alicante</span></footer>
+</div>
+
+<!-- ================= PROYECTO: STÜSSY GRUNGE ================= -->
+<div id="stussy-grunge" class="case" hidden>
+  <section class="open two" aria-label="Apertura del proyecto">
+    <img src="img/stussy-grunge-productos.webp" alt="Dirección Grunge: collage rojo y negro con productos">
+    <img src="img/stussy-grunge-moodboard.webp" alt="Moodboard grunge con fanzines, carteles y tipografía expresiva" style="object-position:70% 50%">
+    <span class="corner bl">Stüssy Grunge</span>
+    <span class="corner br">web · proyecto especulativo</span>
+  </section>
+
+  <header class="case-head wrap">
+    <h1>Stüssy Grunge</h1>
+    <p class="tag">Proyecto especulativo</p>
+    <dl class="meta" aria-label="Datos del proyecto"><div><dt>Tipo</dt><dd>Especulativo</dd></div><div><dt>Disciplinas</dt><dd>Diseño web</dd></div><div><dt>Curso</dt><dd>2025/26</dd></div><div><dt>Estilo</dt><dd>Grunge, fanzine</dd></div></dl>
+  </header>
+
+  <section class="case-text wrap">
+    <p class="lead">La tienda online de Stüssy montada como un fanzine fotocopiado, con papel rasgado y rojo sobre negro.</p>
+    <div class="body">
+      <p>Partí del streetwear y de la cultura skate en la que nació la marca. Analicé webs que llevan el collage a la pantalla, como Self Seekers o la de Eminem de 2008, y usé la textura y el desgaste como parte de la interfaz.</p>
+      <p>El negro es la base, el blanco aparece como papel rasgado entre secciones y el rojo #BE0000 marca precios y marcos. Debajo del ruido hay una retícula de 12 columnas con los productos en módulos de tres, para que la tienda se siga usando bien.</p>
+      <p class="credit">Proyecto especulativo, sin encargo ni relación con la marca · Moodboard con referencias de terceros · Fotografías de producto y modelos: Stüssy</p>
+    </div>
+  </section>
+
+  <section class="plates" aria-label="Imágenes del proyecto">
+    <div class="plate"><img src="img/stussy-grunge-moodboard.webp" alt="Moodboard grunge con fanzines, carteles y tipografía expresiva" loading="lazy"></div>
+    <div class="plate"><img src="img/stussy-grunge-wireframe.webp" alt="Wireframe de la dirección Grunge" loading="lazy"></div>
+    <div class="plate web" style="background:#0E0E0E"><img src="img/stussy-grunge-web.webp" alt="Página completa de la dirección Grunge" loading="lazy"></div>
+    <div class="plate panel dark"><img src="img/stussy-grunge-productos.webp" alt="Collage de productos de la dirección Grunge" loading="lazy"></div>
+    <div class="plate"><img src="img/stussy-grunge-color.webp" alt="Gama cromática de la dirección Grunge: rojo, negro y blanco" loading="lazy"></div>
+  </section>
+
+  <a class="next" href="#senaletica"><span class="wrap"><span>Siguiente proyecto</span><b>Señalética</b></span></a>
   <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="#info">Info</a><span>Vega Baja, Alicante</span></footer>
 </div>
 
@@ -331,7 +402,7 @@
     <div class="plate"><img src="img/senaletica-fachada.webp" alt="Banderola de producción audiovisual en fachada" loading="lazy"></div>
   </section>
 
-  <a class="next wrap" href="#cometas"><span>Siguiente proyecto</span><b>Cometas</b></a>
+  <a class="next" href="#cometas"><span class="wrap"><span>Siguiente proyecto</span><b>Cometas</b></span></a>
   <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="#info">Info</a><span>Vega Baja, Alicante</span></footer>
 </div>
 
@@ -374,7 +445,7 @@
     </div>
   </section>
 
-  <a class="next wrap" href="#dima-smola"><span>Siguiente proyecto</span><b>Dima Smola</b></a>
+  <a class="next" href="#dima-smola"><span class="wrap"><span>Siguiente proyecto</span><b>Dima Smola</b></span></a>
   <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="#info">Info</a><span>Vega Baja, Alicante</span></footer>
 </div>
 
