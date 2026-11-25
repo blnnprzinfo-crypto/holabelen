@@ -29,35 +29,41 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap">
+<link rel="preload" href="../fonts/belen-manuscrita.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../site.css">
 
 <a class="skip" href="#trabajo">Skip to work</a>
 <header class="site-head">
   <a class="brand" href="#" aria-label="Hola Belén, home"><img class="on-white" src="../img/marca/logo-azul.svg" alt="" width="339" height="160"><img class="on-blue" src="../img/marca/logo-blanco.svg" alt="" width="339" height="160"></a>
-  <nav aria-label="Main"><a href="#trabajo" data-sec="trabajo">Work</a><a href="#info" data-sec="info">Info</a><a href="../" hreflang="es" lang="es">ES</a></nav>
+  <nav aria-label="Main"><a href="#trabajo" data-sec="trabajo">Work</a><a href="#info" data-sec="info">About</a><a href="#contacto" data-sec="contacto">Contact</a><a href="../" hreflang="es" lang="es">ES</a></nav>
 </header>
+<div class="leer" aria-hidden="true"></div>
 
 <!-- ================= HOME ================= -->
 <div id="home">
-  <section class="hero" aria-label="Cover">
-    <h1 class="sr">Hello, I am Belén Pérez, graphic designer</h1>
-    <div class="hero-mark" aria-hidden="true">
-      <img class="belen" src="../img/marca/belen-blanco.svg" alt="" width="422" height="97">
-      <span class="dg">graphic design</span>
+  <section class="saludo" aria-label="Cover">
+    <div class="saludo-sticky">
+      <h1 class="sr">Hello, I am Belén Pérez, graphic designer</h1>
+      <div class="hero-mark" aria-hidden="true"><img class="belen" src="../img/marca/belen-blanco.svg" alt="" width="422" height="97"><span class="dg">graphic design</span></div>
+      <div class="words" aria-hidden="true">
+        <img class="w" src="../img/marca/hola-blanco.svg" alt="" width="374" height="180">
+        <span class="w" lang="ca">Bon dia</span>
+        <span class="w" lang="en">Hello</span>
+        <span class="w" lang="fr">Bonjour</span>
+      </div>
+      <p class="langs" aria-hidden="true"><span>castellano</span><span>valencià</span><span>english</span><span>français</span></p>
+      <div class="hero-intro">
+        <p>I am Belén Pérez, a graphic designer in Orihuela, Spain. I make brand identities, editorial pieces and social media content.</p>
+        <p class="status">Looking for an internship in Alicante or Murcia, 2026/27</p>
+        <a class="btn" href="#trabajo">See work <span aria-hidden="true">↓</span></a>
+      </div>
     </div>
-    <img class="hola" src="../img/marca/hola-blanco.svg" alt="" width="374" height="180" aria-hidden="true">
-    <p class="hero-foot"><span>Portfolio 2026</span><span>Orihuela, Alicante, Spain</span></p>
-  </section>
-
-  <section class="intro wrap">
-    <p class="who"><b>Belén Pérez</b><span>Graphic designer in Orihuela, Spain</span></p>
-    <p class="claim">Designs brand identities and editorial pieces. Listens before drawing.</p>
-    <p class="status">Looking for an internship in Alicante or Murcia, spring 2027</p>
   </section>
 
   <section class="index wrap" id="trabajo" aria-labelledby="t-trabajo">
     <h2 id="t-trabajo" class="sec-title">Work</h2>
     <ol>
+      <li><a href="#losie-tattoo" data-img="../img/losie/24.webp"><span class="t">Losie Tattoo</span><span class="d">Social, photo and video</span><span class="k">Experience</span><span class="y">2026</span></a></li>
       <li><a href="#dima-smola" data-img="../img/dima-hero.webp"><span class="t">Dima Smola</span><span class="d">Identity</span><span class="k">Real client</span><span class="y">2026</span></a></li>
       <li><a href="#metropoli" data-img="../img/metropoli-herb-lubalin.webp"><span class="t">Metropoli</span><span class="d">Editorial</span><span class="k">Academic</span><span class="y">2025</span></a></li>
       <li><a href="#mayte" data-img="../img/mayte-papeleria.webp"><span class="t">Peluquería Mayte</span><span class="d">Identity and packaging</span><span class="k">Real client</span><span class="y"></span></a></li>
@@ -69,33 +75,54 @@
   </section>
   <div class="peek" aria-hidden="true"></div>
 
+  <section class="exp" aria-labelledby="t-exp">
+    <div class="wrap exp-in">
+      <div class="exp-txt">
+        <p class="kicker">Experience · January to May 2026</p>
+        <h2 id="t-exp">Losie Tattoo</h2>
+        <p class="lead" data-revela>Five months running the communication of a tattoo studio in Murcia, from the Instagram feed to the shop window.</p>
+        <ul class="ticks"><li>Feed design, templates and social media campaigns, with a content calendar.</li><li>Photography of the finished work, filming and editing reels.</li><li>Posters, flyers, cards, catalogues and flash books.</li><li>Merchandise and signage, with window vinyls and in-store posters.</li><li>Mockups showing how the tattoo looks on the client’s body.</li><li>Websites for the group’s three brands.</li></ul>
+        <a class="btn" href="#losie-tattoo">See the project <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="exp-phone">
+        <figure class="phone " data-feed="../img/losie/" aria-label="Interactive phone with the Losie Tattoo Murcia Instagram profile">
+        <div class="ph-frame"><div class="ph-screen">
+          <div class="ph-top"><span class="ph-avatar" aria-hidden="true">LT</span><div><b>losietattoomurcia</b><span><span class="ph-count">41</span> posts</span></div></div>
+        </div></div>
+      </figure>
+        <p class="help">Tap a month or a post. These are the 41 posts on the profile from January to May 2026.</p>
+        <p class="credit">Posts by @losietattoomurcia. The tattoos are by the studio’s artists.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="work" aria-label="Featured projects">
     <a class="proj right" href="#dima-smola">
-      <figure><img src="../img/dima-hero.webp" alt="Grey sculptural relief by Dima Smola"></figure>
+      <figure data-cta="See project"><img src="../img/dima-hero.webp" alt="Grey sculptural relief by Dima Smola"></figure>
       <div class="cap"><h3>Dima Smola</h3><div><p>Identity for a sculptor whose surfaces change with the light.</p><span class="more">More details</span></div></div>
     </a>
     <a class="proj left" href="#metropoli">
-      <figure class="panel" style="background:#141414"><img src="../img/metropoli-herb-lubalin.webp" alt="Opening page on Herb Lubalin in Metropoli magazine" loading="lazy"></figure>
+      <figure data-cta="See project" class="panel" style="background:#141414"><img src="../img/metropoli-herb-lubalin.webp" alt="Opening page on Herb Lubalin in Metropoli magazine" loading="lazy"></figure>
       <div class="cap"><h3>Metropoli</h3><div><p>Design trends magazine: masthead, contents page and inside spreads.</p><span class="more">More details</span></div></div>
     </a>
     <a class="proj right" href="#mayte">
-      <figure class="panel" style="background:#FFFFFF"><img src="../img/mayte-monograma.webp" alt="Peluquería Mayte monogram, an M made from a pair of scissors" loading="lazy"></figure>
+      <figure data-cta="See project" class="panel" style="background:#FFFFFF"><img src="../img/mayte-monograma.webp" alt="Peluquería Mayte monogram, an M made from a pair of scissors" loading="lazy"></figure>
       <div class="cap"><h3>Peluquería Mayte</h3><div><p>Monogram, stationery and packaging for a neighbourhood hair salon.</p><span class="more">More details</span></div></div>
     </a>
     <a class="proj left" href="#stussy-aero">
-      <figure><img src="../img/stussy-aero-apertura.webp" alt="Aero direction of the Stüssy store, with a system window and bubbles" style="object-position:50% 25%" loading="lazy"></figure>
+      <figure data-cta="See project"><img src="../img/stussy-aero-apertura.webp" alt="Aero direction of the Stüssy store, with a system window and bubbles" style="object-position:50% 25%" loading="lazy"></figure>
       <div class="cap"><h3>Stüssy Aero</h3><div><p>Speculative Stüssy online store in the Frutiger Aero style of the 2000s.</p><span class="more">More details</span></div></div>
     </a>
     <a class="proj right" href="#stussy-grunge">
-      <figure><img src="../img/stussy-grunge-productos.webp" alt="Red and black product collage for the Grunge direction" style="object-position:50% 30%" loading="lazy"></figure>
+      <figure data-cta="See project"><img src="../img/stussy-grunge-productos.webp" alt="Red and black product collage for the Grunge direction" style="object-position:50% 30%" loading="lazy"></figure>
       <div class="cap"><h3>Stüssy Grunge</h3><div><p>The same store turned into a torn-paper fanzine in red and black.</p><span class="more">More details</span></div></div>
     </a>
     <a class="proj left" href="#senaletica">
-      <figure><img src="../img/senaletica-fachada.webp" alt="Audiovisual production projecting sign on a concrete façade" loading="lazy"></figure>
+      <figure data-cta="See project"><img src="../img/senaletica-fachada.webp" alt="Audiovisual production projecting sign on a concrete façade" loading="lazy"></figure>
       <div class="cap"><h3>Wayfinding</h3><div><p>Pictograms for classrooms, services and common areas, applied on site.</p><span class="more">More details</span></div></div>
     </a>
     <a class="proj right" href="#cometas">
-      <figure><img src="../img/cometas-cartel-pared.webp" alt="Cometas poster pasted on a peeling wall" loading="lazy"></figure>
+      <figure data-cta="See project"><img src="../img/cometas-cartel-pared.webp" alt="Cometas poster pasted on a peeling wall" loading="lazy"></figure>
       <div class="cap"><h3>Cometas</h3><div><p>Poster and identity for an exhibition proposal at Las Cigarreras, Alicante.</p><span class="more">More details</span></div></div>
     </a>
   </section>
@@ -103,14 +130,11 @@
   <section class="info wrap" id="info">
     <figure class="me"><img src="../img/belen-perez.webp" alt="Portrait of Belén Pérez in a black blazer against a dark background" width="1334" height="2000" loading="lazy"></figure>
     <div class="about">
-      <h2>Info <img class="cara" src="../img/marca/mano-cara-azul.svg" alt="" width="23" height="34" aria-hidden="true"></h2>
-      <p class="big">I am Belén Pérez, a fourth-year Graphic Design student at EASDO in Orihuela, Spain. I work on brand identity and editorial design.</p>
-      <p>I also tattoo fine line work. It taught me to sketch a lot before drawing, because a line on skin cannot be erased.</p>
-      <dl>
-        <dt>Looking for</dt><dd>Internship in Alicante or Murcia, 2026/27</dd>
-        <dt>Email</dt><dd><a href="mailto:blnn.przinfo@gmail.com">blnn.przinfo@gmail.com</a></dd>
-        <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/belnprez">belnprez</a></dd>
-      </dl>
+      <h2>About <img class="cara" src="../img/marca/mano-cara-azul.svg" alt="" width="23" height="34" aria-hidden="true"></h2>
+      <p class="big" data-revela>I am in my fourth year of Graphic Design at EASDO in Orihuela, and I have already worked in a studio handling the identity, social media and video of a real brand.</p>
+      <p>I also do fine line tattoos. It taught me to sketch a lot before drawing, because a line on skin cannot be erased.</p>
+      <div class="cv"><div class="col"><h3>Education</h3><ul><li><b>Degree in Graphic Design</b>EASDO, Orihuela · 2023 – now, 4th year</li><li><b>Arts Baccalaureate</b>IES El Palmeral, Orihuela · 2022 – 2023</li></ul></div><div class="col"><h3>Experience</h3><ul><li><b>Graphic designer and community manager</b>Losie Tattoo, Murcia · Jan – May 2026</li><li><b>Social media, marketing and websites</b>Academy Giant, Giant Experience and El Artesano a Mano · summer 2022</li></ul></div><div class="col"><h3>Tools</h3><ul><li>Illustrator, InDesign, Photoshop</li><li>Figma, Procreate</li><li>Firefly, Midjourney, Runway</li><li>Blender and Fusion 360 (basic)</li></ul></div><div class="col"><h3>Languages</h3><ul><li>Spanish and Valencian, native</li><li>English B2 Cambridge, preparing C1</li><li>French A2</li></ul></div></div>
+      <p class="busco"><b>Looking for</b>Curricular and extracurricular internships, 2026/27, in Alicante and Murcia.</p>
     </div>
   </section>
 
@@ -121,12 +145,65 @@
       <a class="mail" href="mailto:blnn.przinfo@gmail.com">blnn.przinfo@gmail.com</a>
       <ul class="social" aria-label="Contact">
         <li><a href="https://www.linkedin.com/in/belnprez"><img src="../img/marca/mano-in-blanco.svg" alt="LinkedIn" width="31" height="26"></a></li>
+        <li><a href="https://www.behance.net/belnprez11" class="be" aria-label="Behance">Bē</a></li>
         <li><a href="mailto:blnn.przinfo@gmail.com"><img src="../img/marca/mano-sobre-blanco.svg" alt="Email" width="31" height="22"></a></li>
       </ul>
       <img class="simbolo" src="../img/marca/simbolo-blanco.svg" alt="" width="153" height="153" aria-hidden="true">
     </div>
     <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="https://www.linkedin.com/in/belnprez">LinkedIn</a><span>Vega Baja, Alicante</span></footer>
   </section>
+</div>
+
+<!-- ================= PROYECTO: LOSIE TATTOO ================= -->
+<div id="losie-tattoo" class="case" hidden>
+  <section class="open two" aria-label="Project opening">
+    <img src="../img/losie/01.webp" alt="Tattoo of two dogs on an arm, photographed for the feed">
+    <img src="../img/losie/25.webp" alt="Carousel reading Encuentra la raza de tu perro">
+    <span class="corner bl">Losie Tattoo</span>
+    <span class="corner br">social · photo · video · 2026</span>
+  </section>
+
+  <header class="case-head wrap">
+    <h1>Losie Tattoo</h1>
+    <dl class="meta" aria-label="Project details"><div><dt>Type</dt><dd>Studio experience</dd></div><div><dt>Role</dt><dd>Graphic designer and community manager</dd></div><div><dt>Dates</dt><dd>January to May 2026</dd></div><div><dt>Place</dt><dd>Murcia, Spain</dd></div></dl>
+  </header>
+
+  <section class="case-text wrap">
+    <p class="lead" data-revela>For five months I looked after the Losie Tattoo image on every front, from the phone screen to the shop window.</p>
+    <div class="body">
+      <p>My daily work was the Instagram profile. I designed the carousel templates, photographed the finished tattoos, filmed and edited the reels and kept the calendar so the feed had a steady rhythm.</p>
+      <p>Beyond social media I made posters, flyers, cards, catalogues and flash books, the merchandise and the window vinyls. I also prepared mockups so each client could see their tattoo on their body before getting it, and built the websites for the group’s three brands.</p>
+      <p class="credit">Posts by @losietattoomurcia. The tattoos are by the studio’s artists.</p>
+    </div>
+  </section>
+
+  <section class="plates" aria-label="Project images">
+    <div class="plate phone-plate">
+      <figure class="phone big" data-feed="../img/losie/" aria-label="Interactive phone with the Losie Tattoo Murcia Instagram profile">
+        <div class="ph-frame"><div class="ph-screen">
+          <div class="ph-top"><span class="ph-avatar" aria-hidden="true">LT</span><div><b>losietattoomurcia</b><span><span class="ph-count">41</span> posts</span></div></div>
+        </div></div>
+      </figure>
+      <p class="help">Tap a month or a post. These are the 41 posts on the profile from January to May 2026.</p>
+    </div>
+    <div class="quad sq">
+      <img src="../img/losie/02.webp" alt="Carousel No es el tatuaje, es lo que representa" loading="lazy">
+      <img src="../img/losie/17.webp" alt="Carousel Nuestras peores reseñas" loading="lazy">
+      <img src="../img/losie/22.webp" alt="Carousel No todos los tatuajes en la espalda quedan así de bien" loading="lazy">
+      <img src="../img/losie/39.webp" alt="Carousel Proverbios para tatuarte" loading="lazy">
+    </div>
+    <div class="duo">
+      <img src="../img/losie/07.webp" alt="Reel cover Verdad o mito" loading="lazy" style="object-position:50% 30%">
+      <img src="../img/losie/10.webp" alt="Reel cover Resultado tattoo" loading="lazy" style="object-position:50% 30%">
+    </div>
+    <div class="duo">
+      <img src="../img/losie/24.webp" alt="Realistic sleeve tattoo on an arm" loading="lazy">
+      <img src="../img/losie/32.webp" alt="Realistic chest tattoo" loading="lazy">
+    </div>
+  </section>
+
+  <a class="next" href="#dima-smola"><span class="wrap"><span>Next project</span><b>Dima Smola</b></span></a>
+  <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="#info">About</a><span>Vega Baja, Alicante</span></footer>
 </div>
 
 <!-- ================= PROYECTO: DIMA SMOLA ================= -->
@@ -144,7 +221,7 @@
   </header>
 
   <section class="case-text wrap">
-    <p class="lead">His reliefs change depending on how the light hits them. The brand had to step aside so it would not compete with them.</p>
+    <p class="lead" data-revela>His reliefs change depending on how the light hits them. The brand had to step aside so it would not compete with them.</p>
     <div class="body">
         <p>His competitors sell themselves as decor, with classic serifs and sand tones. I positioned him as an artist: the descriptor "Sculptural Surfaces", the claim "Shaped by light" and a mineral palette with no accent colour, because the work already brings the colour.</p>
         <p>The D seal comes from a hand sketch. I turned it into a system: signature, seal, a 25-page brand manual, an embossed business card, a certificate of authenticity, a website and Instagram templates.</p>
@@ -171,7 +248,7 @@
   </section>
 
   <a class="next" href="#metropoli"><span class="wrap"><span>Next project</span><b>Metropoli</b></span></a>
-  <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="#info">Info</a><span>Vega Baja, Alicante</span></footer>
+  <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="#info">About</a><span>Vega Baja, Alicante</span></footer>
 </div>
 
 <!-- ================= PROYECTO: METROPOLI ================= -->
@@ -189,7 +266,7 @@
   </header>
 
   <section class="case-text wrap">
-    <p class="lead">A design trends magazine whose inside pages are about Herb Lubalin and David Carson, each laid out by his own rules.</p>
+    <p class="lead" data-revela>A design trends magazine whose inside pages are about Herb Lubalin and David Carson, each laid out by his own rules.</p>
     <div class="body">
         <p>I designed the masthead, the contents page and the inside pages. The contents page is seven quarter circles turning across the spread, one per section, in red and black. I also made a two-colour version.</p>
         <p>The inside pages change register depending on who they are about. The Lubalin and Ginzburg pages go through Eros, Fact, Avant Garde and Moneysworth with tight headlines and overlapping letters. The Carson pages break the grid and dirty the image, the way he did in Ray Gun.</p>
@@ -219,7 +296,7 @@
   </section>
 
   <a class="next" href="#mayte"><span class="wrap"><span>Next project</span><b>Peluquería Mayte</b></span></a>
-  <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="#info">Info</a><span>Vega Baja, Alicante</span></footer>
+  <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="#info">About</a><span>Vega Baja, Alicante</span></footer>
 </div>
 
 <!-- ================= PROYECTO: PELUQUERÍA MAYTE ================= -->
@@ -237,7 +314,7 @@
   </header>
 
   <section class="case-text wrap">
-    <p class="lead">The monogram joins the M of Mayte with a pair of open scissors. Everything else is painted yellow and magenta.</p>
+    <p class="lead" data-revela>The monogram joins the M of Mayte with a pair of open scissors. Everything else is painted yellow and magenta.</p>
     <div class="body">
         <p>I wanted a mark that worked small, on a card or on the side of a box. The legs of the M are the blades of the scissors. It comes with two flat colours and a drawn head of hair that ends in a pair of lips.</p>
         <p>With those pieces I built the full stationery set, with letterheads, envelopes and business cards, die-cut boxes for products that I made and photographed, social media posts and a street poster.</p>
@@ -279,7 +356,7 @@
   </section>
 
   <a class="next" href="#stussy-aero"><span class="wrap"><span>Next project</span><b>Stüssy Aero</b></span></a>
-  <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="#info">Info</a><span>Vega Baja, Alicante</span></footer>
+  <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="#info">About</a><span>Vega Baja, Alicante</span></footer>
 </div>
 
 <!-- ================= PROYECTO: STÜSSY AERO ================= -->
@@ -298,7 +375,7 @@
   </header>
 
   <section class="case-text wrap">
-    <p class="lead">The Stüssy online store turned into an early-2000s computer desktop, with a turquoise sky and products inside bubbles.</p>
+    <p class="lead" data-revela>The Stüssy online store turned into an early-2000s computer desktop, with a turquoise sky and products inside bubbles.</p>
     <div class="body">
       <p>This direction comes from Frutiger Aero, the optimistic look of the interfaces of those years. I studied the 2008 Disney Channel website and the 2007 Windows Vista site and kept their glossy gradients, reflections and organic shapes.</p>
       <p>The background is light turquoise and the buttons use fuchsia, red, green and blue with a glossy finish. Products float in bubbles you pop to open the product page. Underneath, the page is organised in modules, just like the Grunge version.</p>
@@ -320,7 +397,7 @@
   </section>
 
   <a class="next" href="#stussy-grunge"><span class="wrap"><span>Next project</span><b>Stüssy Grunge</b></span></a>
-  <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="#info">Info</a><span>Vega Baja, Alicante</span></footer>
+  <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="#info">About</a><span>Vega Baja, Alicante</span></footer>
 </div>
 
 <!-- ================= PROYECTO: STÜSSY GRUNGE ================= -->
@@ -339,7 +416,7 @@
   </header>
 
   <section class="case-text wrap">
-    <p class="lead">The Stüssy online store put together like a photocopied fanzine, with torn paper and red on black.</p>
+    <p class="lead" data-revela>The Stüssy online store put together like a photocopied fanzine, with torn paper and red on black.</p>
     <div class="body">
       <p>I started from streetwear and the skate culture the brand was born in. I looked at websites that bring collage to the screen, such as Self Seekers and Eminem's 2008 site, and used texture and wear as part of the interface.</p>
       <p>Black is the base, white appears as torn paper between sections and red #BE0000 marks prices and frames. Under the noise there is a 12-column grid with products in three-column modules, so the store stays easy to use.</p>
@@ -356,7 +433,7 @@
   </section>
 
   <a class="next" href="#senaletica"><span class="wrap"><span>Next project</span><b>Wayfinding</b></span></a>
-  <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="#info">Info</a><span>Vega Baja, Alicante</span></footer>
+  <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="#info">About</a><span>Vega Baja, Alicante</span></footer>
 </div>
 
 <!-- ================= PROYECTO: SEÑALÉTICA ================= -->
@@ -374,7 +451,7 @@
   </header>
 
   <section class="case-text wrap">
-    <p class="lead">Thirteen pictograms for finding your way around EASDO, my school, from the virtual reality room to the print room.</p>
+    <p class="lead" data-revela>Thirteen pictograms for finding your way around EASDO, my school, from the virtual reality room to the print room.</p>
     <div class="body">
         <p>They all share the same thick, round-ended stroke and the same circle with a yellow-to-magenta gradient, so they read as one family even when the object changes.</p>
         <p>The name sits underneath in sans serif capitals. I then applied them to a projecting sign on a façade and to the cafeteria sign.</p>
@@ -403,7 +480,7 @@
   </section>
 
   <a class="next" href="#cometas"><span class="wrap"><span>Next project</span><b>Cometas</b></span></a>
-  <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="#info">Info</a><span>Vega Baja, Alicante</span></footer>
+  <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="#info">About</a><span>Vega Baja, Alicante</span></footer>
 </div>
 
 <!-- ================= PROYECTO: COMETAS ================= -->
@@ -421,7 +498,7 @@
   </header>
 
   <section class="case-text wrap">
-    <p class="lead">An exhibition proposal about children growing up among ruins, told with a kite and a red thread.</p>
+    <p class="lead" data-revela>An exhibition proposal about children growing up among ruins, told with a kite and a red thread.</p>
     <div class="body">
         <p>The kite takes the colours of the Palestinian flag and the outline of its map. I drew it on a sky of childlike lines, with a sad sun, because the exhibition is about a game that gets interrupted.</p>
         <p>The identity carries over to the poster, a folded flyer in Spanish and Arabic, the ticket, the room signage and a tote bag. The flyer ends with the line that sums up the route: “Only a red thread keeps all the kites up”.</p>
@@ -445,8 +522,8 @@
     </div>
   </section>
 
-  <a class="next" href="#dima-smola"><span class="wrap"><span>Next project</span><b>Dima Smola</b></span></a>
-  <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="#info">Info</a><span>Vega Baja, Alicante</span></footer>
+  <a class="next" href="#losie-tattoo"><span class="wrap"><span>Next project</span><b>Losie Tattoo</b></span></a>
+  <footer class="wrap"><span>© 2026 Belén Pérez</span><a href="#info">About</a><span>Vega Baja, Alicante</span></footer>
 </div>
 
 <script src="../site.js"></script>
