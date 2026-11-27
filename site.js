@@ -61,7 +61,7 @@
   }
 
   var ticking=false;
-  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(function(){saludoTick();updateHead();progress();if(window.__pinta)window.__pinta();ticking=false})}},{passive:true});
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(function(){saludoTick();updateHead();progress();ticking=false})}},{passive:true});
   window.addEventListener('resize',function(){saludoTick();updateHead()});
   route(); saludoTick();
 
@@ -159,7 +159,7 @@
         for(var i=0;i<w.length;i++)w[i].classList.toggle('on',i<n);
       });
     };
-    window.__pinta=pinta;
+    window.addEventListener('scroll',function(){requestAnimationFrame(pinta)},{passive:true});
     window.addEventListener('hashchange',function(){setTimeout(pinta,50)});
     pinta();
   }
@@ -171,4 +171,16 @@
     asoman.forEach(function(f){f.classList.add('asoma');io.observe(f)});
   }
 
+  /* ---------- 11. cursor con "Ver" encima de los proyectos (solo ratón) ---------- */
+  if(!reduce&&window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    var cur=document.createElement('div');cur.className='cursor';cur.setAttribute('aria-hidden','true');cur.innerHTML='<span>'+(EN?'View':'Ver')+'</span>';
+    document.body.appendChild(cur);
+    var cx=-100,cy=-100,tx=-100,ty=-100;
+    document.addEventListener('mousemove',function(e){tx=e.clientX;ty=e.clientY;
+      var t=e.target.closest&&e.target.closest('.ph-grid button, .case .plates img');
+      cur.classList.toggle('grande',!!t);cur.classList.toggle('sobre-azul',!!(e.target.closest&&e.target.closest('.saludo,.contact,.next,.proj figure')));
+    },{passive:true});
+    document.addEventListener('mouseleave',function(){tx=ty=-100});
+    (function loop(){cx+=(tx-cx)*.22;cy+=(ty-cy)*.22;cur.style.transform='translate('+cx+'px,'+cy+'px)';requestAnimationFrame(loop)})();
+  }
 })();
