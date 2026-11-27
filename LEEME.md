@@ -15,11 +15,11 @@
 2. New repository → nombre `holabelen` → Public → Create.
 3. "uploading an existing file" → arrastra `index.html` y la carpeta `img` → Commit.
 4. Settings → Pages → Source: "Deploy from a branch" → Branch `main` / `(root)` → Save.
-5. En 1-2 minutos estará en `https://TU-USUARIO.github.io/holabelen/`.
+5. En 1-2 minutos estará en `https://holabelen.github.io/` (repositorio `holabelen/holabelen.github.io`).
 
 ## Dominio propio (opcional, ~8 €/año)
 1. Compra `holabelen.es` (por ejemplo en DonDominio).
-2. En el DNS del dominio crea 4 registros A hacia 185.199.108.153, 185.199.109.153, 185.199.110.153 y 185.199.111.153, y un CNAME `www` → `TU-USUARIO.github.io`.
+2. En el DNS del dominio crea 4 registros A hacia 185.199.108.153, 185.199.109.153, 185.199.110.153 y 185.199.111.153, y un CNAME `www` → `holabelen.github.io`.
 3. En GitHub: Settings → Pages → Custom domain → `holabelen.es` → Save → marca "Enforce HTTPS".
 
 ## Estructura actual

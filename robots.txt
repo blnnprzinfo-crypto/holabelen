@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blnnprzinfo-crypto.github.io/holabelen/sitemap.xml
+Sitemap: https://holabelen.github.io/sitemap.xml
